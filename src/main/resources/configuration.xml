@@ -3,8 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="myLogger" class="wyznikiewicz.spring.implementations.LoggerImpl"></bean>
+	<bean id="myLogger" class="wyznikiewicz.spring.implementations.LoggerImpl">
+		<property name="name" value="myLogger"/>
+		<property name="version" value="3"/>
+	</bean>
 	<bean id="usersRepository" class="wyznikiewicz.spring.implementations.UsersRepositoryImpl">
-		<property name="logger" ref="myLogger"></property>
+		<property name="logger" ref="myLogger"/>
 	</bean>
 </beans>

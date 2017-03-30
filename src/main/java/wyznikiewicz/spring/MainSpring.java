@@ -14,8 +14,6 @@ public class MainSpring {
 		UsersRepository usersRepository = context.getBean("usersRepository", UsersRepository.class);
 		
 		User janek = usersRepository.createUser("janek");
-		
-		
 	}
 
 }
